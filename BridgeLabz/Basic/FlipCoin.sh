@@ -13,5 +13,7 @@ for((i=0;i<$n;i++))
             Tail=$Tail+$add
      fi
 }
-echo "Head is occure : " $Head
-echo "Tail is occure : " $Tail
+declare -i h=$Head*100/$n
+declare -i t=$Tail*100/$n
+echo "Head is occured : " $h%
+echo "Tail is occured : " $t%
