@@ -5,7 +5,6 @@ reset(){
   echo "Created by davidhcefx"
   echo "2017.4.4"
   echo "TicTacToe game in bash"
-  echo "Wrintten in Ubuntu-XFCE desktop environment"
   Arr=(. . . . . . . . .)
   player=1
   gamestatus=1
