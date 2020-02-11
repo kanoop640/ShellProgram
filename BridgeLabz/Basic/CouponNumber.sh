@@ -3,7 +3,7 @@ c=""
 s=,
 for(( i=0; i<$n; i++ ))
 {
-	rnd=$(( RANDOM%10 ))
+	rnd=$(( RANDOM ))
 	if [[ $c != *"$rnd"* ]]
 	then
 	        c=$c$rnd$s

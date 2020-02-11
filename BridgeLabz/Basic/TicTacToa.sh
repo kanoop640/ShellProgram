@@ -3,11 +3,12 @@ for(( i=0; i<9; i++ ))
 {
 	arr[$i]=0
 }
-echo ${arr[2]}
-read -p "Enter player " player
+#echo ${arr[2]}
+read -p "Enter player value 1 for human and 2 for machine " player
 n=9
 print()
 {
+	
 	echo ${arr[0]} "|" ${arr[1]} "|" ${arr[2]} 
 	echo ${arr[3]} "|" ${arr[4]} "|" ${arr[5]} 
 	echo ${arr[6]} "|" ${arr[7]} "|" ${arr[8]}
@@ -21,11 +22,7 @@ isWon()
 	p5=$(( ${arr[6]} + ${arr[4]} + ${arr[2]} ))
 	p6=$(( ${arr[0]} + ${arr[3]} + ${arr[6]} ))
 
-	#m1=$(( ${arr[0]} + ${arr[1]} + ${arr[2]} ))
-	#m2=$(( ${arr[3]} + ${arr[4]} + ${arr[5]} ))
-	#m3=$(( ${arr[6]} + ${arr[7]} + ${arr[8]} ))
-	#m4=$(( ${arr[0]} + ${arr[4]} + ${arr[8]} ))
-	#m5=$(( ${arr[6]} + ${arr[4]} + ${arr[2]} ))
+	
 
 	if(( $p1 == 3 || $p2 == 3 || $p3 == 3 || $p4 == 3 || $p5 == 3 || $p6 == 3 ))
 	then
@@ -40,7 +37,7 @@ isWon()
 	fi
 }
 
-while [[ $player == 1 || $player == 2 && $n > 0  ]]
+while [[  $n > 0  ]]
 do
 	if(( $player==1 ))
 	then
@@ -70,9 +67,15 @@ do
 		player=2
 		fi
 	else
-		echo "Wrong Input "
+		echo "Wrong Input please input correct value "
+		read -p "Enter player value 1 for human and 2 for machine " player
 	fi
 isWon
 done
 		
-		
+if(( $player !=1 && $player !=2 ))
+then
+{
+ echo " Wrong input "
+}
+fi
